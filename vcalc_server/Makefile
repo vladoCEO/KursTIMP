@@ -6,5 +6,10 @@ SRC = main.cpp interface.cpp logger.cpp auth_base.cpp authenticator.cpp calculat
 vcalc: $(SRC)
 	$(CXX) $(CXXFLAGS) $(SRC) -o vcalc $(LIBS)
 
+TESTSRC = tests.cpp interface.cpp logger.cpp auth_base.cpp authenticator.cpp calculator.cpp
+
+tests: $(TESTSRC)
+	$(CXX) $(CXXFLAGS) $(TESTSRC) -o tests $(LIBS) -lUnitTest++
+
 clean:
-	rm -f vcalc
+	rm -f vcalc tests
