@@ -4,7 +4,7 @@
 #include <cryptopp/hex.h>
 #include <cryptopp/md5.h>
 #include <cryptopp/filters.h>
-
+#include <cctype>
 namespace CPP = CryptoPP;
 
 bool Authenticator::isHex(const std::string& s)
